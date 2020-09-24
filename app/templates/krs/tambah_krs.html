@@ -1,0 +1,131 @@
+{% include "head.html" %}
+
+<title>SISMAN - Tambah KRS</title>
+<body id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+  {% include "sidebar.html" %}
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Topbar -->
+        {% include "nav.html" %}
+        <!-- End of Topbar -->
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+
+          <!-- Page Heading -->
+          <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h3 class="h3 mb-0 text-gray-800">Tambah Data Santri</h3>
+          </div>
+
+          <!-- Content Row -->
+
+          <!-- AREA  BAR -->
+          <div class="row">
+            <div class="col-xl-12 col-lg-7">
+                  <div class="card shadow mb-4">
+                    <!-- Card Header - Accordion -->
+                    <a href="#collapseCardExample" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
+                      <h6 class="m-0 font-weight-bold text-primary">Tambah Data KRS</h6>
+                    </a>
+                    <!-- Card Content - Collapse -->
+                    <div class="collapse show" id="collapseCardExample">
+                      <div class="card-body">
+                        <form action="/tambah_krs" method="POST">
+                            <div class="form-group">
+                              <label for="">NPM</label>
+                              <select class="form-control" name="npm">
+                                {%for data in mhs%}
+                                <option value="{{data.npm}}">{{data.npm}}</option>
+                                {%endfor%}
+                              </select>
+                            </div>
+                            <div class="form-group">
+                              <label for="">Kode MK</label>
+                              <select class="form-control" name="kode_mk">
+                                {%for mk in mk%}
+                                <option value="{{mk.kode_mk}}">{{mk.kode_mk}}</option>
+                                {%endfor%}
+                              </select>
+                            </div>
+                            <div class="form-group">
+                              <label for="">Kode Dosen</label>
+                              <select class="form-control" name="kode_dosen">
+                                {%for ds in dosen%}
+                                <option value="{{ds.nip}}">{{ds.nip}}</option>
+                                {%endfor%}
+                              </select>
+                            </div>
+                            <div class="form-group">
+                              <label for="">Kelas</label>
+                              <input type="text" class="form-control" name="kelas" >
+                            </div>
+                            <div class="form-group">
+                              <label for="">Tahun Ajaran</label>
+                              <input type="text" class="form-control" name="thn_ajaran" >
+                            </div>
+                            <div class="form-group">
+                              <label for="">Nilai UTS</label>
+                              <input type="text" class="form-control" name="nilai_uts" >
+                            </div>
+                            <div class="form-group">
+                              <label for="">Nilai UAS</label>
+                              <input type="text" class="form-control" name="nilai_uas" >
+                            </div>
+                            <div class="form-group">
+                              <label for="">Nilai IPK</label>
+                              <input type="text" class="form-control" name="nilai_ipk" >
+                            </div>
+                            <button type="submit" class="btn btn-success">Submit</button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+          </div>
+
+
+        <!-- END BAR -->
+
+
+          <!-- Content Row -->
+        </div>
+        <!-- /.container-fluid -->
+
+      </div>
+      <!-- End of Main Content -->
+
+      <!-- Footer -->
+      <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Copyright &copy; Mas Hadie 2020</span>
+          </div>
+        </div>
+      </footer>
+      <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+
+
+  {% include "footer.html" %}

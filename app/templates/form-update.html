@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Pelajarnu</title>
+</head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+<div class="row">
+<div class="container">
+  <div class="container-fluid">
+    <form action="/form-update" method="POST" enctype="multipart/form-data">
+      <div class="form-row">
+        <div class="form-grup col-md-12">
+          <div class="alert alert-success">Data Diri</div>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="">NIK</label>
+          <input type="hidden" name="id" value="{{ data.id }}">
+          <input type="number" name="nik" class="form-control" value="{{ data.nik }}">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="">Nama Lengkap</label>
+          <input type="text" name="nama_l" class="form-control" value="{{ data.nama_l }}">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="">Jenis Kelamin</label>
+          <select class="form-control" name="jenis_k" required>
+              <option value="{{ data.jenis_k }}"></option>
+              <option value="Laki-laki">Laki-Laki</option>
+              <option value="Perempuan">Perempuan</option>
+          </select>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="">Tempat Lahir</label>
+          <input type="text" name="tempat_l" class="form-control" value="{{ data.tempat_l }}">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="">Tanggal Lahir</label>
+          <input type="text" name="tgl_lahir" class="form-control" value="{{ data.tgl_lahir }}">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="">Pendidikan Terakhir</label>
+          <select class="form-control" name="pendidikan" required >{{data.pendidikan }}
+              <option value="#">--silahkan pilih--</option>
+              <option value="SD">SD/Sederajat</option>
+              <option value="SMP">SMP/Sederajat</option>
+              <option value="SMA">SMA/Sederajat</option>
+              <option value="Diploma">Diploma</option>
+              <option value="Sarjana">Sarjana</option>
+              <option value="Magister">Magister</option>
+          </select>
+        </div>
+        <div class="form-group col-md-6">
+          <label>Alamat</label><span style="color:red;"> *</span>
+          <textarea class="form-control" name="alamat" rows="3">{{data.alamat}}</textarea>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="">No Handphone/WA</label>
+          <input type="number" name="no_hp" class="form-control" value="{{ data.no_hp }}">
+        </div>
+        <div class="form-grup col-md-12">
+          <div class="alert alert-success">Data Organisasi</div>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="">Tahun Masuk</label>
+          <input type="number" name="thn_masuk" class="form-control" value="{{ data.thn_masuk}}">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="">Status</label>
+          <select class="form-control" name="status" required>
+              <option value="{{ data.status}}"></option>
+              <option value="Aktif">Aktif</option>
+              <option value="Alumni">Alumni</option>
+          </select>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="">Lokasi Makesta</label>
+          <input type="text" name="lok_makesta" class="form-control" value="{{ data.lok_makesta}}">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="">Lokasi Lakmud</label>
+          <input type="text" name="lok_lakmud" class="form-control" value="{{ data.lok_lakmud}}">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="">Lokasi Lakut</label>
+          <input type="text" name="lok_lakut" class="form-control" value="{{ data.lok_lakut}}">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="">Lokasi Latin</label>
+          <input type="text" name="lok_latin" class="form-control" value="{{ data.lok_latin }}">
+        </div>
+        <div class="form-grup col-md-12">
+          <div class="alert alert-success">Data Login</div>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="">Username</label>
+          <input type="text" name="username" class="form-control" value="{{ data.username }}">
+        </div>
+        <div class="form-group col-md-6">
+          <label for="">Password</label>
+          <input type="text" name="password" class="form-control" value="{{ data.password}}">
+        </div>
+      </div>
+      <button type="submit" class="btn btn-success  btn-user btn-block" name="submit">Simpan</button>
+   </form>
+  </div>
+</div>
+</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</html>

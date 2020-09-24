@@ -1,0 +1,168 @@
+{% include "head.html" %}
+<title>Pelajarnu - Register</title>
+<body>
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Topbar -->
+        <!-- End of Topbar -->
+
+        <!-- Begin Page Content -->
+        <div class="container">
+          <br>
+          <br>
+          <br>
+        <div class="container-fluid">
+          <h1 class="h3 mb-2 text-gray-800">Pendaftaran Pelajarnu</h1>
+          <p class="mb-4">Silahkan masukan  data dengan benar</p>
+          <!-- <p class="mb-4">Silahkan klik Tombol disamping untuk mendapatkan infografiknya <a href=""></a></p> -->
+          <div class="row">
+            <div class="col-xl-12 col-lg-7">
+                  <div class="card shadow mb-4">
+                    <!-- Card Header - Accordion -->
+                    <!-- <a href="#collapseCardExample" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
+                      <h6 class="m-0 font-weight-bold text-primary">Grabing Tweet</h6>
+                    </a> -->
+                    <!-- Card Content - Collapse -->
+                    <div class="collapse show" id="collapseCardExample">
+                      <div class="card-body">
+                        <form action="\register" method="POST" enctype="multipart/form-data">
+                          <div class="form-row">
+                            <div class="form-grup col-md-12">
+                              <div class="alert alert-success">Data Diri</div>
+                            </div>
+                            <div class="form-group col-md-6">
+                              <label for="">NIK</label>
+                              <input type="number" name="nik" class="form-control">
+                            </div>
+                            <div class="form-group col-md-6">
+                              <label for="">Nama Lengkap</label>
+                              <input type="text" name="nama_l" class="form-control">
+                            </div>
+                            <div class="form-group col-md-6">
+                              <label for="">Jenis Kelamin</label>
+                              <select class="form-control" name="jenis_k" required>
+                                  <option value="">--silahkan pilih-</option>
+                                  <option value="Laki-laki">Laki-Laki</option>
+                                  <option value="Perempuan">Perempuan</option>
+                              </select>
+                            </div>
+                            <div class="form-group col-md-6">
+                              <label for="">Tempat Lahir</label>
+                              <input type="text" name="tempat_l" class="form-control">
+                            </div>
+                            <div class="form-group col-md-6">
+                              <label for="">Tanggal Lahir</label>
+                              <input type="" name="tgl_lahir" class="form-control" id="datepicker">
+                            </div>
+                            <div class="form-group col-md-6">
+                              <label for="">Pendidikan Terakhir</label>
+                              <select class="form-control" name="pendidikan" required>
+                                  <option value="">--silahkan pilih-</option>
+                                  <option value="SD">SD/Sederajat</option>
+                                  <option value="SMP">SMP/Sederajat</option>
+                                  <option value="SMA">SMA/Sederajat</option>
+                                  <option value="Diploma">Diploma</option>
+                                  <option value="Sarjana">Sarjana</option>
+                                  <option value="Magister">Magister</option>
+                              </select>
+                            </div>
+                            <div class="form-group col-md-6">
+                              <label>Alamat</label><span style="color:red;"> *</span>
+                              <textarea class="form-control" name="alamat" rows="3"></textarea>
+                            </div>
+                            <div class="form-group col-md-6">
+                              <label for="">No Handphone/WA</label>
+                              <input type="number" name="no_hp" class="form-control">
+                            </div>
+                            <div class="form-grup col-md-12">
+                              <div class="alert alert-success">Data Organisasi</div>
+                            </div>
+                            <div class="form-group col-md-6">
+                              <label for="">Tahun Masuk</label>
+                              <input type="" name="thn_masuk" class="form-control" id="tahunmasuk">
+                            </div>
+                            <div class="form-group col-md-6">
+                              <label for="">Status</label>
+                              <select class="form-control" name="status" required>
+                                  <option value="">--silahkan pilih-</option>
+                                  <option value="Aktif">Aktif</option>
+                                  <option value="Alumni">Alumni</option>
+                              </select>
+                            </div>
+                            <div class="form-group col-md-6">
+                              <label for="">Lokasi Makesta</label>
+                              <input type="text" name="lok_makesta" class="form-control">
+                            </div>
+                            <div class="form-group col-md-6">
+                              <label for="">Lokasi Lakmud</label>
+                              <input type="text" name="lok_lakmud" class="form-control">
+                            </div>
+                            <div class="form-group col-md-6">
+                              <label for="">Lokasi Lakut</label>
+                              <input type="text" name="lok_lakut" class="form-control">
+                            </div>
+                            <div class="form-group col-md-6">
+                              <label for="">Lokasi Latin</label>
+                              <input type="text" name="lok_latin" class="form-control">
+                            </div>
+                            <div class="form-grup col-md-12">
+                              <div class="alert alert-success">Data Login</div>
+                            </div>
+                            <div class="form-group col-md-6">
+                              <label for="">Username</label>
+                              <input type="text" name="username" class="form-control">
+                            </div>
+                            <div class="form-group col-md-6">
+                              <label for="">Password</label>
+                              <input type="password" name="password" class="form-control">
+                            </div>
+                          </div>
+                          <button type="submit" class="btn btn-success  btn-user btn-block" name="submit">Simpan</button>
+                       </form>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        <!-- /.container-fluid -->
+
+      </div>
+      <!-- End of Main Content -->
+
+      <!-- Footer -->
+      <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Copyright &copy; Mas Hadie 2020</span>
+          </div>
+        </div>
+      </footer>
+      <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+
+
+{% include "footer.html" %}
