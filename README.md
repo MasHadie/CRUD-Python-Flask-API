@@ -3,5 +3,6 @@
 
 Demo Program : https://ujikom-hadi.herokuapp.com
 
-Silahkan Daftar terlabih dahulu untuk mendapatkan username dan password login
+Silahkan Daftar terlabih dahulu untuk login.
+
 Daftar : https://ujikom-hadi.herokuapp.com/register
